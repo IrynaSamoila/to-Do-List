@@ -13,20 +13,20 @@ angular.module('app', [
 		data: {
 			'title': 'Lista zadan'
 		}
-	})/*.state('git_hub', {
-		url: '/git-hub',
-		templateUrl: 'templates/pages/gitHub.html',
-		controller: 'MainController',
+	}).state('completed', {
+		url: '/completed',
+		templateUrl: 'templates/pages/completed.html',
+		controller: 'CompletedCtrl',
 		data: {
-			'title': 'X-Formation public repositories'
+			'title': 'Zadan wypelniono'
 		}
-	}).state('top_contributors', {
-		url: '/top-contributors',
-		templateUrl: 'templates/pages/topContributors.html',
-		controller: 'MainController',
+	}).state('table_list', {
+		url: '/table-list',
+		templateUrl: 'templates/pages/tableList.html',
+		controller: 'TableListCtrl',
 		data: {
-			'title': 'Top contributors'
+			'title': 'Tablica zadan'
 		}
-	})*/
+	})
 });
 

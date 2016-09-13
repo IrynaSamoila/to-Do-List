@@ -1,0 +1,23 @@
+<div class="state-buttons">
+	<a class="orange-button btn" ui-sref="completed">Zadan wypelniono</a>
+	<a class="orange-button btn" ui-sref="main">Lista zadan</a>
+	<div class="clear"></div>
+</div>
+<h2>Tablica zadan</h2>
+
+<div class="table-container">
+	<table>
+		<thead>
+			<th class="index">Numer</th>
+			<th class="th-text">Zadanie</th>
+			<th class="status">Status</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="todo in todos track by $index">
+				<td>{{$index + 1}}</td>
+				<td class="td-text">{{todo.text}}</td>
+				<td ng-class="{'not-completed ': !todo.isDone}">{{todo.isDone ? 'wykonane' : 'niewykonane'}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

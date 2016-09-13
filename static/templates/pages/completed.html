@@ -1,0 +1,14 @@
+<div class="state-buttons">
+	<a class="orange-button btn" ui-sref="table_list">Tablica zadan</a>
+	<a class="orange-button btn" ui-sref="main">Lista zadan</a>
+	<div class="clear"></div>
+</div>
+<h2>Zadan wypelniono</h2>
+<div class="completed-result" ng-if="halfIsDone">
+	<h3>Już bliżej niż dalej</h3>
+	<img src="images/turtle-1.png" />
+</div>
+<div class="completed-result" ng-if="!halfIsDone">
+	<h3>Jeszcze trochę pracy przed tobą</h3>
+	<img src="images/turtle-2.png" />
+</div>

@@ -1,15 +1,37 @@
+<div class="state-buttons">
+	<a class="orange-button btn" ui-sref="table_list">Tablica zadan</a>
+	<a class="orange-button btn" ui-sref="completed">Zadan wypelniono</a>
+	<div class="clear"></div>
+</div>
 <h2>Lista zadan</h2>
 <ul class="item-list">
-	<li class="item", ng-repeat="todo in todos track by $index">
+	<li class="item" ng-repeat="todo in todos track by $index">
 		<div class="index">{{$index + 1}}.</div>
-		<div class="text">{{todo.text}}</div>
-		<div class="done-button">
-			<button ng-click="done(todo)">Ok</button>
+		<div class="text" ng-class="{'strike-text': todo.isDone}">{{todo.text}}</div>
+		<div class="done-button" ng-if="!todo.isDone">
+			<button class="green-button btn" ng-click="showConfirm(todo)">Ok</button>
 		</div>
 		<div class="clear"></div>
 	</li>
 </ul>
-<div>
-	<input type="text" ng-model="newTodo.text" />
-	<button ng-click="addToDo()">Ok</button>
+<div class="new-item">
+	<input type="text" ng-model="newTodo.text" placeholder="Dodaj nowe zadanie..."/>
+	<div class="btn-outer">
+		<button class="blue-button btn" ng-click="addToDo()">Ok</button>
+	</div>
+	<div class="error-text" ng-if="errorAdd">Przydaloby sie jednak dodac jakis text</div>
+</div>
+
+<div class="modal" ng-if="open">
+	<div class="modal-center">
+		<div class="modal-container">
+			<div class="modal-body">
+				<div class="confirm_text">Oznaczyc zadanie jako zakonczone?</div>
+			</div>
+			<div class="modal-footer">
+				<button class="green-button btn" ng-click="done(itemToDo);"> Tak </button>
+				<button class="blue-button btn" ng-click="cancel();"> Anulowac </button>
+			</div>
+		</div>
+	</div>
 </div>
