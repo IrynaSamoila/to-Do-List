@@ -1,3 +1,6 @@
+@import "buttons.css";
+@import "modal.css";
+
 body {
 	background-color: #efefef;
 	text-align: center;

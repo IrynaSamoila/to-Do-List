@@ -8,8 +8,6 @@ angular.module('app')
 		$scope.itemToDo = null;
 		$scope.open = false;
 
-		var confirmMessage = "Oznaczyc zadanie jako zakonczone?";
-
 		$scope.addToDo = function() {
 			if (!$scope.newTodo.text) {
 				$scope.errorAdd = true;
