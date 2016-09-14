@@ -30,4 +30,3 @@ angular.module('app')
 			getDefaultData: getDefaultData
 		};
 	});
-

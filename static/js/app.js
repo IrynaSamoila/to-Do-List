@@ -9,24 +9,14 @@ angular.module('app', [
 	$stateProvider.state('main', {
 		url: '/',
 		templateUrl: 'templates/pages/main.html',
-		controller: 'MainCtrl',
-		data: {
-			'title': 'Lista zadan'
-		}
+		controller: 'MainCtrl'
 	}).state('completed', {
 		url: '/completed',
 		templateUrl: 'templates/pages/completed.html',
-		controller: 'CompletedCtrl',
-		data: {
-			'title': 'Zadan wypelniono'
-		}
+		controller: 'CompletedCtrl'
 	}).state('table_list', {
 		url: '/table-list',
 		templateUrl: 'templates/pages/tableList.html',
-		controller: 'TableListCtrl',
-		data: {
-			'title': 'Tablica zadan'
-		}
+		controller: 'TableListCtrl'
 	})
 });
-

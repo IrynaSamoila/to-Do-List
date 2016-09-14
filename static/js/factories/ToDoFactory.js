@@ -2,7 +2,6 @@
 
 angular.module('app')
 	.factory('ToDoFactory', function(ToDoStaticFactory){
-
 		function save(json) {
 			localStorage.setItem('todos', JSON.stringify(json));
 		}
@@ -11,6 +10,7 @@ angular.module('app')
 			if (localStorage.getItem('todos') == null) {
 				localStorage.setItem('todos', JSON.stringify(ToDoStaticFactory.getDefaultData()));
 			}
+
 			return JSON.parse(localStorage.getItem('todos'));
 		}
 
@@ -19,4 +19,3 @@ angular.module('app')
 			read: read
 		};
 	});
-
